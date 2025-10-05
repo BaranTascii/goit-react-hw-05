@@ -15,7 +15,7 @@ const MovieReviews = lazy(() =>
 );
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
-export default function App() {
+function App() {
   return (
     <div className={styles.app}>
       <Navigation />
@@ -34,3 +34,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
