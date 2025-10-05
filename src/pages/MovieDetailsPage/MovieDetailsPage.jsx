@@ -1,5 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation, useParams, Outlet, NavLink } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useParams,
+  Outlet,
+  NavLink,
+} from "react-router-dom";
 import { fetchMovieDetails, getImageUrl } from "../../services/moviesApi";
 import Loader from "../../components/Loader/Loader";
 import styles from "./MovieDetailsPage.module.css";
@@ -32,17 +38,23 @@ function MovieDetailsPage() {
 
       <div className={styles.container}>
         <img
-          src={getImageUrl(movie.poster_path) ?? "https://via.placeholder.com/300x450?text=No+Image"}
+          src={
+            getImageUrl(movie.poster_path) ??
+            "https://via.placeholder.com/300x450?text=No+Image"
+          }
           alt={movie.title}
           className={styles.poster}
         />
         <div className={styles.info}>
-          <h2>{movie.title} {movie.release_date ? `(${movie.release_date.slice(0,4)})` : ""}</h2>
+          <h2>
+            {movie.title}{" "}
+            {movie.release_date ? `(${movie.release_date.slice(0, 4)})` : ""}
+          </h2>
           <p>User score: {Math.round((movie.vote_average || 0) * 10)}%</p>
           <h3>Overview</h3>
           <p>{movie.overview}</p>
           <h4>Genres</h4>
-          <p>{movie.genres?.map(g => g.name).join(", ")}</p>
+          <p>{movie.genres?.map((g) => g.name).join(", ")}</p>
         </div>
       </div>
 
@@ -50,12 +62,20 @@ function MovieDetailsPage() {
         <h3>Additional information</h3>
         <ul className={styles.links}>
           <li>
-            <NavLink to="cast" state={{ from: backRef.current }} className={styles.link}>
+            <NavLink
+              to="cast"
+              state={{ from: backRef.current }}
+              className={styles.link}
+            >
               Cast
             </NavLink>
           </li>
           <li>
-            <NavLink to="reviews" state={{ from: backRef.current }} className={styles.link}>
+            <NavLink
+              to="reviews"
+              state={{ from: backRef.current }}
+              className={styles.link}
+            >
               Reviews
             </NavLink>
           </li>

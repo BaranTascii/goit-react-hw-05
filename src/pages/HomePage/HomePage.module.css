@@ -1,3 +1,9 @@
-.main { padding: 1rem; }
-.title { margin: 0 0 1rem 0; }
-.err { color: red; }
+.main {
+  padding: 1rem;
+}
+.title {
+  margin: 0 0 1rem 0;
+}
+.err {
+  color: red;
+}

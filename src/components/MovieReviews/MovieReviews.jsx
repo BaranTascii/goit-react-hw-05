@@ -20,7 +20,8 @@ function MovieReviews() {
 
   if (loading) return <Loader />;
   if (error) return <p className={styles.err}>{error}</p>;
-  if (!reviews || reviews.length === 0) return <p className={styles.empty}>No reviews found.</p>;
+  if (!reviews || reviews.length === 0)
+    return <p className={styles.empty}>No reviews found.</p>;
 
   return (
     <ul className={styles.list}>
