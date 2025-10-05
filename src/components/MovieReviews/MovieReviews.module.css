@@ -1,0 +1,6 @@
+.list { padding: 1rem; list-style: none; display: grid; gap: 1rem; }
+.item { background: #fff; padding: 0.75rem; border-radius: 6px; }
+.author { margin: 0 0 0.5rem 0; font-weight: 700; }
+.content { margin: 0; white-space: pre-wrap; }
+.err { color: red; padding: 1rem; }
+.empty { padding: 1rem; }

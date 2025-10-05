@@ -1,0 +1,41 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  list-style: none;
+}
+.item {
+  display: flex;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  align-items: flex-start;
+}
+.img {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-weight: 700;
+  margin: 0;
+}
+.char {
+  margin: 0.2rem 0 0;
+  color: #444;
+  font-size: 0.9rem;
+}
+.err {
+  color: red;
+  padding: 1rem;
+}
+.empty {
+  padding: 1rem;
+}
